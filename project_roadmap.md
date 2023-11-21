@@ -16,7 +16,8 @@
 - [x] Finish first half (prompts user for ingredients)
 > Code prompts user for ingredients, as well as exits upon user request
 - [x] Test for bugs, documenting problem areas
-> Infinite loop found
+> 1. Infinite loop found
+> 2. Bug in the add_ingredients() function. To be fixed in sprint 3, as it depends on linking ingredients text file to program. 
 - [x] Fix bugs, documenting the error and how it was solved
 > Solved infinite loop, added necessary break
 ## Sprint 3
