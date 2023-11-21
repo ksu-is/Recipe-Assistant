@@ -1,6 +1,23 @@
-accepted_ingredients_list = [] #list of ingredients the program accepts -- can find recipes that contain these ingredients, maybe will be a .txt file
-user_ingredients_list = [] #list of ingredients the user has -- user will enter data into this list
-recipes_list = [] #list of recipes the program can suggest -- ** will probably make a list of recipes in another .txt file, then import it to this list **
+import os
+
+cmd ="curl https://raw.githubusercontent.com/ksu-is/Recipe-Assistant/main/accepted_ingredients.txt -o accepted_ingredients.txt" #link to list of ingredients the user is allowed to enter, currently incomplete
+
+os.system(cmd) #opens the ingredients link, reads the content, and converts it into a list
+ingredients = open("accepted_ingredients.txt", "r")
+ingredients_text = ingredients.read()
+accepted_ingredients_list = ingredients_text.split("\n") #accepted ingredients list
+
+cmd1 ="curl https://raw.githubusercontent.com/ksu-is/Recipe-Assistant/main/recipes.txt -o recipes.txt" #link to list of recipes the program can suggest, currently incomplete
+
+os.system(cmd1) #opens the recipes link, reads the content, and converts it into a list
+recipes = open("recipes.txt", "r")
+recipes_text = recipes.read()
+recipes_list = recipes_text.split("\n") #recipes list
+
+#print(ingredients_list) tested these two to make sure they worked, and they did
+#print(recipes_list)
+
+user_ingredients_list = [""] #list of ingredients the user has -- user will enter data into this list
 
 def add_ingredients(): #adds ingredients to the user's list of ingredients
     while True:
@@ -9,7 +26,7 @@ def add_ingredients(): #adds ingredients to the user's list of ingredients
         if ingredients_input=="exit":
             return
         elif ingredients_input in accepted_ingredients_list:
-            user_ingredients_list += ingredients_input
+            user_ingredients_list += ingredients_input #this doesnt work but i will solve this later
         else:
             display_accepted_ingredients = input("Sorry, I don't recognize that ingredient. Would you like to see a list of ingredients I accept? Type 'yes' or 'no'.\n")
             display_accepted_ingredients = display_accepted_ingredients.lower()
@@ -22,7 +39,7 @@ def add_ingredients(): #adds ingredients to the user's list of ingredients
 
 
 def accepted_ingredients(): #prints a list displaying the ingredients the program accepts
-    print()
+    print(accepted_ingredients_list)
 
 def suggest_recipe(): #suggests a recipe using ingredients the user has -- **plan to add an option that says something along the lines of "dont like? let me suggest a different recipe!"**
     print()
