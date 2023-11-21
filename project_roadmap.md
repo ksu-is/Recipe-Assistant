@@ -7,12 +7,19 @@
 - [x] Link to current depository
 > Listed above
 ## Sprint 2
-- [ ] Plan code structure 
-- [ ] Begin coding
-- [ ] Add comments and documentation
-- [ ] Finish first half (prompts user for ingredients)
-- [ ] Test for bugs, documenting problem areas
-- [ ] Fix bugs, documenting the error and how it was solved
+- [x] Plan code structure
+> Basic code structure created
+- [x] Begin coding
+> Functions, lists, user inputs, etc. created, but not fully functional
+- [x] Add comments and documentation
+> Code documented, easy to follow along, and planned additions listed in comments
+- [x] Finish first half (prompts user for ingredients)
+> Code prompts user for ingredients, as well as exits upon user request
+- [x] Test for bugs, documenting problem areas
+> 1. Infinite loop found
+> 2. Bug in the add_ingredients() function. To be fixed in sprint 3, as it depends on linking ingredients text file to program. 
+- [x] Fix bugs, documenting the error and how it was solved
+> Solved infinite loop, added necessary break
 ## Sprint 3
 - [ ] Finish second half (outputs potential recipes)
 - [ ] Add comments and documentation
