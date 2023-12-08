@@ -21,7 +21,11 @@
 - [x] Fix bugs, documenting the error and how it was solved
 > Solved infinite loop, added necessary break
 ## Sprint 3
-- [ ] Finish second half (outputs potential recipes)
-- [ ] Add comments and documentation
-- [ ] Test for bugs, documenting problem areas
-- [ ] Fix bugs, documenting the error and how it was solved
+- [x] Finish second half (outputs potential recipes)
+> Program outputs recipes, recommends random recipes, displays list of all recipes
+- [x] Add comments and documentation
+> Documentation is present
+- [x] Test for bugs, documenting problem areas
+> Bugs around loops, bugs with inputting ingredients
+- [x] Fix bugs, documenting the error and how it was solved
+> Fixed infinite loops by removing unnecessary "while True," and similar, fixed ingredient input bug
